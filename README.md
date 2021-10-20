@@ -53,7 +53,7 @@
 <img src="imgs/example.png" width="auto" height="500">
 
 Saving SHSH2 files is very important for those who are part of the Jailbreak community,
-unfortunately we don't always have time to get to our computer to do it or you don't remember the data to enter in the various websites.
+unfortunately we don't always have time to get to our computer to do it or we don't remember the data to enter in the various websites.
 
 That's why I created @BlobSaverBot, with this bot you will only have to face a first configuration on the PC
 (Guided by an article that the bot will send you or by a simple program I created for Windows users),
