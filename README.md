@@ -97,7 +97,7 @@ iTunes
 
     - Open BlobSaver
 
-     - Connect your device to the PC
+    - Connect your device to the PC
 
     - Press 'Read from device' [top right]
 
