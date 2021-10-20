@@ -55,7 +55,7 @@
 Saving SHSH2 files is very important for those who are part of the Jailbreak community,
 unfortunately we don't always have time to get to our computer to do it or we don't remember the data to enter in the various websites.
 
-That's why I created @BlobSaverBot, with this bot you will only have to face a first configuration on the PC
+That's why I created [@BlobSaverBot](https://t.me/BlobSaverBot), with this bot you will only have to face a first configuration on the PC
 (Guided by an article that the bot will send you or by a simple program I created for Windows users),
 after it you will get a file that just forward to the bot every time you want to save the SHSH2 of the currently signed versions.
 
