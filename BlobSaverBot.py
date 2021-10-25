@@ -58,11 +58,11 @@ async def bsXML(client, message):
             for firmware in firmwares:
                 if firmware["signed"]:
                     if boardconfig:
-                        cmd = "./tsschecker -d " + device["Device Identifier"] + " -i " + firmware["version"] + " -B " + boardconfig + " -e " + device["ECID"] + " --apnonce " + device["Apnonce"] + " --generator " + device["Generator"] + " -s --save-path " + path + " > /dev/null"
+                        cmd = "./tsschecker -d " + device["Device Identifier"] + " -i " + firmware["version"] + " -B " + boardconfig + " -e " + device["ECID"] + " --apnonce " + device["Apnonce"] + " --generator " + device["Generator"] + " --nocache -s --save-path " + path + " > /dev/null"
                         os.system(cmd)
                     else:
                         for board in boards:
-                            cmd = "./tsschecker -d " + device["Device Identifier"] + " -i " + firmware["version"] + " -B " + board["boardconfig"] + " -e " + device["ECID"] + " --apnonce " + device["Apnonce"] + " --generator " + device["Generator"] + " -s --save-path " + path + " > /dev/null"
+                            cmd = "./tsschecker -d " + device["Device Identifier"] + " -i " + firmware["version"] + " -B " + board["boardconfig"] + " -e " + device["ECID"] + " --apnonce " + device["Apnonce"] + " --generator " + device["Generator"] + " --nocache -s --save-path " + path + " > /dev/null"
                             os.system(cmd)
                             if len(os.listdir(path)) > 0:
                                 boardconfig = board["boardconfig"]
