@@ -73,7 +73,14 @@ async def bsXML(client, message):
             fNames = [ dir + d for d in os.listdir(dir) if os.path.isfile(dir + d)]
             for fName in fNames:
                 try:
-                    await app.send_document(message.chat.id, fName, caption="__@BlobSaverBot__")
+                    dati = fName.split("/")[-1]
+                    dati = re.findall("_([0-9.]*)-|_([a-z-A-Z-0-9,]*)_", dati)
+                    dati = ["".join(filter(lambda y: y, z)) for z in dati]
+                    msg = "`"
+                    for k in dati:
+                        msg += "- " + k + " -"
+                    msg += "`\n\n__@BlobSaverBot__"
+                    await app.send_document(message.chat.id, fName, caption=msg)
                     os.remove(fName)
                 except:
                     pass
