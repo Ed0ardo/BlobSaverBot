@@ -42,6 +42,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#donation">Donation</a></li>
   </ol>
 </details>
 
@@ -101,13 +102,13 @@ iTunes
 ### Setup
 
     - Open BlobSaver
-    
+
     - Connect your device to the PC
-    
+
     - Press 'Read from device' [top right]
-    
+
     - Check 'Specify APNonce' [bottom left]
-    
+
     - Press 'Read from device' [bottom right]
     The device will restart (iTunes or other Apple services may open, close them only when finished)
 
@@ -116,11 +117,11 @@ You should have a screen similar to this:<br/>
 
     - Press 'Save Device' [bottom right]
     You can enter any name you want
-    
+
     - Press 'File' [top left]
-    
+
     - Press 'Export Saved Devices...'
-    
+
     - Choose where you want to save the file and then confirm
 
 ### Now send this file to <a href="https://t.me/BlobSaverBot">@BlobSaverBot</a> on Telegram!
@@ -154,7 +155,7 @@ Project Link: [https://github.com/Ed0ardo/BlobSaverBot](https://github.com/Ed0ar
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-#### Donation:
+## Donation:
 
 > ***Buy me a coffee*** *(PayPal)*: [Ed0ardo](https:///paypal.me/ed0ardo)
 
