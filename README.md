@@ -1,16 +1,16 @@
 <div id="top"></div>
 
-
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://github.com/Ed0ardo/BlobSaverBot">
     <img src="imgs/blobsaverbot.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">BlobSaverBot</h3>
+<h3 align="center">BlobSaverBot</h3>
 
-  <p align="center">
+<p align="center">
     An awesome Telegram bot to save your SHSH2!
     <br />
     <br />
@@ -20,15 +20,15 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#features">Features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -45,9 +45,8 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <img src="imgs/example.png" width="auto" height="500">
@@ -64,6 +63,16 @@ so as to make everything even more convenient and faster.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Features
+
+- One Time Configuration
+- Instructions via Article or Script (Windows only)
+- Supports Multiple Devices
+- The server does not store any personal data
+- Automatic notification when a new version of iOS/iPadOS released
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 ### Built With
@@ -77,9 +86,8 @@ To create this bot I used:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 Here is a guide to using the bot for the first time:
@@ -91,7 +99,6 @@ iCloud
 iTunes
 
 [BlobSaver](https://github.com/airsquared/blobsaver)
-
 
 ### Setup
 
@@ -118,15 +125,12 @@ You should have a screen similar to this:<br/>
 
     - Choose where you want to save the file and then confirm
 
-
 ### Now send this file to <a href="https://t.me/BlobSaverBot">@BlobSaverBot</a> on Telegram!
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Once you have followed the <a href="#setup">Setup</a>, just forward the file obtained to the bot every time you want to save the SHSH2 files,
@@ -134,17 +138,16 @@ if you want to add a device, just go through the <a href="#setup">Setup</a> agai
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the GNU Affero General Public License v3.0. See <a href="https://github.com/Ed0ardo/BlobSaverBot/blob/main/LICENSE">LICENSE</a> for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Telegram: [@EDev9](https://t.me/EDev9)

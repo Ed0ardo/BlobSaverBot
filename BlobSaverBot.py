@@ -1,17 +1,30 @@
-'''
-@author: ed0ardo
-'''
-
 import requests
 from xml.etree import ElementTree
 import json
 import os
+import re
 from pyrogram import filters
 from pyrogram import Client
+import feedparser
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from datetime import datetime
 
 BOT_TOKEN = "XXX"
 API_ID = "12345"
 API_HASH  =  "1E2D3O456"
+
+def getLastVersions(url):
+    try:
+        now = datetime.now()
+        feed = feedparser.parse(url)
+        versions = [version for version in feed.entries if ("iPadOS" in version["title"] or "iOS" in version["title"]) and "OTA" not in version["title"] and (now - datetime.strptime(version["guid"], "%Y-%m-%dT%H:%M:%SZ")).days < 3]
+        return versions
+    except Exception as e:
+        print(e)
+        return False
+
+global lastVers
+lastVers = getLastVersions("https://ipsw.me/timeline.rss")
 
 app = Client(
     "blobSaverBot",
@@ -20,6 +33,48 @@ app = Client(
     bot_token = BOT_TOKEN
 )
 
+
+async def aGetLastVersions(url):
+    try:
+        now = datetime.now()
+        feed = feedparser.parse(url)
+        versions = [version for version in feed.entries if ("iPadOS" in version["title"] or "iOS" in version["title"]) and "OTA" not in version["title"] and (now - datetime.strptime(version["guid"], "%Y-%m-%dT%H:%M:%SZ")).days < 3]
+        return versions
+    except Exception as e:
+        print(e)
+        return False
+
+async def diffVers(newLV, lastN):
+    try:
+        diffVers = [v for v in newLV if v not in lastN]
+        return diffVers
+    except Exception as e:
+        print(e)
+        return False
+
+async def aCheckLastVersions():
+    try:
+        global lastVers
+        newLastVers = await aGetLastVersions("https://ipsw.me/timeline.rss")
+        newer = await diffVers(newLastVers, lastVers)
+        if newer:
+            msg = ""
+            for v in newer:
+                msg += v["summary_detail"]["value"] + "\n"
+            msg += "\nThe ability to download the SHSH2 files of this version takes some time!\n(It can take a couple of hours as well)"
+            ids = os.listdir("./SHSH2/")
+            for id in ids:
+                try:
+                    await app.send_message(int(id), msg)
+                except:
+                    pass
+    except Exception as e:
+        print(e)
+        return False
+
+scheduler = AsyncIOScheduler()
+scheduler.add_job(aCheckLastVersions, "interval", minutes=15)
+scheduler.start()
 
 @app.on_message(filters.document)
 async def bsXML(client, message):
@@ -90,9 +145,8 @@ async def bsXML(client, message):
         print(e)
         await app.send_message(message.chat.id, "Error:\n" + str(e) + "\n\nIf you are sure you have done everything right, please try again later")
 
-
 @app.on_message(filters.command("start"))
-async def regioni(client, message):
+async def start(client, message):
     try:
         msg = "Welcome " + message.from_user.first_name + ", follow [this guide](https://telegra.ph/BlobSaverBot-Setup-10-17) or if you have a Windows PC try this program.\n\nBoth will help you in the first configuration, the next times it will be enough to re-send the file you will get.\n\n[<a href=\"https://github.com/Ed0ardo/BlobSaverBot\">Source Code</a>]"
         await app.send_document(message.chat.id, "BQACAgEAAxkDAAMmYWyt-0MlCK3zDaMVHeVvlXiX6GkAAsMBAAKo9WlHMW2XwKDQ0uEeBA", caption=msg)
