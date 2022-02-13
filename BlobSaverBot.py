@@ -62,6 +62,7 @@ async def aCheckLastVersions():
         newLastVers = await aGetLastVersions("https://ipsw.me/timeline.rss")
         newer = await diffVers(newLastVers, lastVers)
         if newer:
+            lastVers = newLastVers
             msg = ""
             for v in newer:
                 msg += v["summary_detail"]["value"] + "\n"
