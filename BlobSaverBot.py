@@ -1,3 +1,7 @@
+'''
+@author: ed0ardo
+'''
+
 import requests
 from xml.etree import ElementTree
 import json

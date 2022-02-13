@@ -73,8 +73,6 @@ so as to make everything even more convenient and faster.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
 To create this bot I used:
@@ -103,13 +101,13 @@ iTunes
 ### Setup
 
     - Open BlobSaver
-
+    
     - Connect your device to the PC
-
+    
     - Press 'Read from device' [top right]
-
+    
     - Check 'Specify APNonce' [bottom left]
-
+    
     - Press 'Read from device' [bottom right]
     The device will restart (iTunes or other Apple services may open, close them only when finished)
 
@@ -118,11 +116,11 @@ You should have a screen similar to this:<br/>
 
     - Press 'Save Device' [bottom right]
     You can enter any name you want
-
+    
     - Press 'File' [top left]
-
+    
     - Press 'Export Saved Devices...'
-
+    
     - Choose where you want to save the file and then confirm
 
 ### Now send this file to <a href="https://t.me/BlobSaverBot">@BlobSaverBot</a> on Telegram!
@@ -153,5 +151,19 @@ Distributed under the GNU Affero General Public License v3.0. See <a href="https
 Telegram: [@EDev9](https://t.me/EDev9)
 
 Project Link: [https://github.com/Ed0ardo/BlobSaverBot](https://github.com/Ed0ardo/BlobSaverBot)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+#### Donation:
+
+> ***Buy me a coffee*** *(PayPal)*: [Ed0ardo](https:///paypal.me/ed0ardo)
+
+> ***Buy me a coffee*** *(Binance Pay)*: 268880867
+
+> ***Buy me a coffee*** *(Binance Wallet)*: 0x2a895d54c5249349a27183139d5975aa3518d573
+
+> ***Buy me a coffee*** *(Trust Wallet)*: 0x825fFeB482BE713eA3bFea0F3B8c398813B65269
+
+> ***Buy me a coffee*** *(CashApp)*: $Ed0ardo
 
 <p align="right">(<a href="#top">back to top</a>)</p>
